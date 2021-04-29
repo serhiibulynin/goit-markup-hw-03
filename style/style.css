@@ -86,14 +86,18 @@ img {
 }
 
 .header .container{
-  display: flex;  
+  display: flex; 
+  align-items: center; 
 } 
 
 .navigation {
   display: flex;
   align-items: center;
-  
 }
+.our-contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .logo {
   margin-right: 92px;
 
@@ -104,9 +108,6 @@ img {
   text-decoration: none;
   color: #000000;
 }
-.tel-link {
-  margin-right: 50px;
-}
 
 /* site-nav */
 .site-nav {
@@ -115,6 +116,9 @@ img {
 
 .site-nav-item:not(:last-child) {
   margin-right: 50px;
+}
+.site-nav-item {
+  text-align: center;
 }
 
 .site-nav .link {
@@ -157,34 +161,33 @@ img {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-
   background-color: var(--primary-bg-color);
   color: var(--primary-white-color);
 }
-.logo-footer {
+.footer .logo {
+  margin-bottom: 20px;
   margin-right: 0;
-
   color: var(--primary-white-color);
-}
+}  
 
-/* Address */
+.footer-list {
+  margin-top: 10px;
+}
+.footer-list .item:not(:last-child) {
+  margin-bottom: 10px;
+}
 .address {
   font-style: normal;
   margin-top: 20px;
 }
 
-.footer-item{
-  display: flex;
-  flex-direction: column;
-}
-.address .item {
-  margin-top: 10px;
+.footer .link {
   color: var(--footer-text-color);
   text-decoration: none;
   font-style: normal;
 }
-.address .item:hover,
-.address .item:focus {
+.footer .link:hover,
+.footer .link:focus {
   color: var(--accent-color);
 }
 
@@ -196,12 +199,13 @@ img {
 }
 
 .section-title {
+  margin-bottom: 50px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.14;
   text-align: center;
-  margin-bottom: 50px;
 }
 
 /* hero */
@@ -238,13 +242,9 @@ img {
   display: none;
 }
 
-.features-list .text{
-  max-width: 270px;
-}
-
 .features-list {
   display: flex;
-  font-weight: wrap;
+  flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
@@ -252,6 +252,7 @@ img {
 .features-list > .item{
   margin-left: 30px;
   margin-top: 30px;
+  flex-basis: calc((100% - 120px) / 4);
 }
 
 .features-list .title {
@@ -262,6 +263,7 @@ img {
   margin-bottom: 10px;
 }
 /* Works */
+
 .works-list {
   display: flex;
   flex-wrap: wrap;
@@ -273,6 +275,10 @@ img {
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
+}
+
+.section.works {
+  padding-top: 0;
 }
 
 /* team */
@@ -321,12 +327,10 @@ img {
 .portfolio-title{
   display: none;
 }
-.portfolio {
-  padding-top: 110px;
-  padding-bottom: 110px;
-}
 
 .portfolio-list .title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -336,6 +340,7 @@ img {
 .portfolio-list .text {
   font-size: 16px;
   line-height: 1.87;
+  color: var(--primary-text-color);
 }
 
 .portfolio-list {
